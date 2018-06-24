@@ -18,7 +18,8 @@ The MNISt dataset is used to recognize digits. <br />
 
 <img src="https://www.wolfram.com/language/11/neural-networks/assets.en/digit-classification/smallthumb_1.png" alt="neofetch" align="left" height="180px">
 The MNISt dataset is used to recognize digits. <br />
-The saved model is used for recognizing digits in real time using OpenCV and python through a webcam <br />
+
+<br />The saved model is used for recognizing digits in real time using OpenCV and python through a webcam <br />
 
 ##### Click [here](./MNIST_webcam) to go to Digit recognition through webcam case study.
 
