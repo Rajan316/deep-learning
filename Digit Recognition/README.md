@@ -12,14 +12,15 @@ MNIST ("Modified National Institute of Standards and Technology") is the de fact
 The MNISt dataset is used to recognize digits. <br />
  <br /> In this project, we will have a glimpse into how MNIST data can be used to recognize images of digits using convolutional neural networks.
 
-##### Click [here](./MNIST_detect) to go to Framingham case study.
+##### Click [here](./MNIST_detect) to go to Digit recognition through static Images case study.
 
 ### 2. [Digit recognition through webcam](./MNIST_webcam)
 
 <img src="https://www.wolfram.com/language/11/neural-networks/assets.en/digit-classification/smallthumb_1.png" alt="neofetch" align="left" height="180px">
-The saved model is used for recognizing digits in real time using OpenCV and python <br />
+The MNISt dataset is used to recognize digits. <br />
+The saved model is used for recognizing digits in real time using OpenCV and python through a webcam <br />
 
-##### Click [here](./MNIST_webcam) to go to Good Health case study
+##### Click [here](./MNIST_webcam) to go to Digit recognition through webcam case study.
 
 
 ### 3. [Digit recognition through hand movements](./MNIST_hand)
@@ -27,7 +28,7 @@ The saved model is used for recognizing digits in real time using OpenCV and pyt
 <img src="https://www.wolfram.com/language/11/neural-networks/assets.en/digit-classification/smallthumb_1.png" alt="neofetch" align="left" height="250px">
 In this project, using hand movements we recognize digits trained byt he MNISt dataset<br />
 
-##### Click [here](./MNIST_hand) to go to Hepatitis case study.
+##### Click [here](./MNIST_hand) to go to Digit recognition through hand movements.
 
 
 
