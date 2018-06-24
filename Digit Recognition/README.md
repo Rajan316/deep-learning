@@ -1,6 +1,6 @@
 # MNIST Digit Recognizer
 <p align="center">
-<img src="https://yoyoyohamapi.gitbooks.io/mit-ml/content/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/attachments/%E6%89%8B%E5%86%99%E5%AD%97%E7%AC%A6%E9%9B%86.jpg" alt="neofetch" align="middle" height="200px">
+<img src="https://raw.githubusercontent.com/yashk2810/yashk2810.github.io/master/images/mnist.png" alt="neofetch" align="middle" height="200px">
 </p>
 The Framingham Heart Study was started in 1948 under the direction of the National Heart Institute. The initial study recruited 5,209 men and women between 30 and 62 years of age. Researchers asked participants questions about their general health, medications and asked about illnesses, including cancer.<br />
 Patients were given a questionnaire and exam every 2 years and were asked to write down:<br />
