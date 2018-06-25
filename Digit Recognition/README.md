@@ -26,7 +26,7 @@ The MNISt dataset is used to recognize digits. <br />
 ### 3. [Digit recognition through hand movements](./MNIST_hand)
 
 <img src="https://www.wolfram.com/language/11/neural-networks/assets.en/digit-classification/smallthumb_1.png" alt="neofetch" align="left" height="150px">
-In this project, using hand movements we recognize digits trained byt he MNISt dataset<br />
+In this project, using hand movements we recognize digits trained by the MNIST dataset<br />
 
 ##### Click [here](./MNIST_hand) to go to Digit recognition through hand movements.
 
