@@ -87,16 +87,13 @@ by_age_class=framingham.groupby(['age','male','diabetes'])
 framingham.BMI=by_age_class['BMI'].transform(impute_median)
 ```
 
-This helps in making a more informed guess about the missing values.
-
-Also, the correlation plot helps decide which columns need to be dropped from the dataset using the correlation plot. The column "education" has very less correlation with other columns of the dataset and thus can be dropped in our future analysis.
 
 
 
 
 #### Compare confusion matrix between imbalanced vs balanced data
 
-Our aim is to be able to detect the risk of heart disease more precisely even if we have to compromise on the false positives. It is very crucial to reduce the false negatives as a person's health is jeopardised once he is wrongly identified as healthy when in actual he is sick. 
+
 
 <img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
 
@@ -113,7 +110,7 @@ Our aim is to be able to detect the risk of heart disease more precisely even if
 
 ## Future Scope
 
-The Framingham case study provides a foundation for research into clinical case studies related to occurence of heart disease which claims millions of lives every year. Machine learning models helps doctors identify patients who have chances of contracting one. This technique can be replicated for prevention of various other diseases thus saving a lot of lives. 
+
 
 
 
