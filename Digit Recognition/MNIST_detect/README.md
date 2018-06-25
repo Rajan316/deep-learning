@@ -2,23 +2,22 @@
 <p align="center">
 <img src="https://cdn-images-1.medium.com/max/718/1*4TJWlK-FPhskEIJshfEx5g.jpeg" alt="neofetch" align="middle" height="200px">
 </p>
-Recognizing  <br />
+Numbers are everywhere! Humans can read and recognize digits within few    <br />
 
 
 ## Objective
 
+This project aims to build a convolutional neural network that classifies images of digits from 0-9 . 
 
 ## Dataset description
+
+The National Institute for Standards and Technology (NIST) has amassed a large database of digits which is freely available, and has become somewhat of a benchmark for testing classification algorithms. The MNIST database is a modified set compiled from several NIST databases. It consists of 60,000 training examples and 10,000 test samples, each of which is a 28 x 28 pixel greyscale image.
 
 The Keras framework comes already with a MNIST Dataset that can be downloaded. It contains 60.000 images of handwritten images that can be used to train a neural network.
 
 A glimpse into the dataset is provided below:
 
-<img src="https://cdn-images-1.medium.com/max/800/1*UKXLbb40YjviJWerqz3D2Q.png" alt="neofetch" >
-
-
-    
-
+<img src="http://yann.lecun.com/exdb/mnist/" alt="neofetch" >
 
 More information about the data set used in the study can be found at: 
 
