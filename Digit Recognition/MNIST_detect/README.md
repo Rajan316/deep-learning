@@ -2,7 +2,7 @@
 <p align="center">
 <img src="https://cdn-images-1.medium.com/max/718/1*4TJWlK-FPhskEIJshfEx5g.jpeg" alt="neofetch" align="middle" height="200px">
 </p>
-MNIST <br />
+Recognizing  <br />
 
 
 ## Objective
@@ -10,17 +10,17 @@ MNIST <br />
 
 ## Dataset description
 
-The dataset is a small subset of possible FHS dataset, having 4240 observations and 16 variables. The dataset was obtained from https://courses.edx.org/asset-v1:MITx+15.071x_2a+2T2015+type@asset+block/framingham.csv
+The Keras framework comes already with a MNIST Dataset that can be downloaded. It contains 60.000 images of handwritten images that can be used to train a neural network.
 
 A glimpse into the dataset is provided below:
 
-<img src="images/dataset_glimpse.PNG" alt="neofetch" >
+<img src="https://cdn-images-1.medium.com/max/800/1*UKXLbb40YjviJWerqz3D2Q.png" alt="neofetch" >
 
 
     
 
 
-More information about the data set used in the study can be found at: https://biolincc.nhlbi.nih.gov/static/studies/teaching/framdoc.pdf
+More information about the data set used in the study can be found at: 
 
 ## Tools required
 
