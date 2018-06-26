@@ -1,4 +1,6 @@
 
+This repository aims at performing deep learning on a variety of image classsifcation tasks through programming in Python using packages Keras and OpenCV.
+
 # Deep Learning
 
 Deep learning is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example. 
@@ -8,9 +10,6 @@ Deep learning models can achieve state-of-the-art accuracy, sometimes exceeding 
 
 The term “deep” usually refers to the number of hidden layers in the neural network. Traditional neural networks only contain 2-3 hidden layers, while deep networks can have as many as 150.
 
-## Objective
-
-This repository aims at performing deep learning on a variety of image classsifcation tasks through programming in Python.
 
 # Convolutional Neural Networks
 
