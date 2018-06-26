@@ -109,31 +109,43 @@ x_test /= 255
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 ```
+### Building the network
 
-This can be illustrated using a correlation plot. From this plot we can understand how some of the columns are correlated to each other thus using them in filling the missing values.
-
-<p align="center">
-<img src="images/corrplot.PNG" alt="neofetch" align="middle" >
-</p>
-
-```{python impute function}
-by_currentSmoker_class=framingham.groupby(['currentSmoker'])
-framingham.cigsPerDay=by_currentSmoker_class['cigsPerDay'].transform(impute_median)
-by_age_class=framingham.groupby(['age','male','diabetes'])
-framingham.BMI=by_age_class['BMI'].transform(impute_median)
+```{}
+model = Sequential()
+model.add(Conv2D(32, kernel_size=(3, 3),
+                 activation='relu',
+                 input_shape=input_shape))
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes, activation='softmax'))
 ```
 
+#### Compiling and training the model
 
+```{}
+model.compile(loss=keras.losses.categorical_crossentropy,
+              optimizer=keras.optimizers.Adadelta(),
+              metrics=['accuracy'])
 
-
-
-#### Compare confusion matrix between imbalanced vs balanced data
-
+model.fit(x_train, y_train,
+          batch_size=batch_size,
+          epochs=epochs,
+          verbose=1,
+          validation_data=(x_test, y_test))
+score = model.evaluate(x_test, y_test, verbose=0)
+print('Test loss:', score[0])
+print('Test accuracy:', score[1])
+```
 
 
 <img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
 
-#### Compare between ROC curve of predicted probabilities of imbalanced vs balanced data
+#### Plot of model training and model test
 
 <img src="images/roc_curve_imbalanced.PNG" width="425"/> <img src="images/roc_curve_balanced.PNG" width="425"/> 
 <p align="left">
@@ -141,7 +153,7 @@ framingham.BMI=by_age_class['BMI'].transform(impute_median)
 </p>
  
 
-##### Click [here](./Framingham.ipynb) to go to the notebook where the entire case study steps has been performed.
+##### Click [here](./.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
 ## Future Scope
