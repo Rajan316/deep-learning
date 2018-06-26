@@ -69,7 +69,7 @@ from keras.datasets import mnist
 # the data, split between train and test sets
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 ```
-<img src="images/profile.PNG" alt="neofetch" align="middle" >
+<img src="input_data_sample.PNG" alt="neofetch" align="middle" >
 
 
 ### Data Cleaning
