@@ -155,10 +155,11 @@ print('Test accuracy:', score[1])
 
 #### Images of prediction
 
-img src="prediction1.PNG" width="425"/> <img src="prediction2.PNG" width="425"/> 
-<p align="left">
-<img src="prediction3.PNG" width="350" hspace="50"/>
-</p>
+<img src="prediction1.PNG" width="425"/> 
+<img src="prediction2.PNG" width="425"/> 
+
+<img src="prediction3.PNG" width="350"/>
+
 ##### Click [here](./MNIST_detect.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
