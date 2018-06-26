@@ -126,7 +126,7 @@ model.add(Dense(num_classes, activation='softmax'))
 ```
 <img src="model_plot.png" width="425"/> 
 
-### Model Summary
+#### Model Summary
 
 The model summary gives a representation of the trained model and its statistics.
 
