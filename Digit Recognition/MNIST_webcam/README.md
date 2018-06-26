@@ -155,6 +155,8 @@ print('Test accuracy:', score[1])
 
 #### Using OpenCV to capture webcam
 
+OpenCV (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. Here cv2.VideoCapture() is used to capture webcam video feed.
+
 ```{}
 cap = cv2.VideoCapture(0)
 
@@ -177,9 +179,11 @@ while (cap.isOpened()):
 
 #### Images of prediction
 
-<img src="./recognized_screenshots/screenshot_1.jpg" width="325"/> <img src="./recognized_screenshots/screenshot_2.jpg" width="325"/> 
-<img src="./recognized_screenshots/screenshot_3.jpg" width="325"/> <img src="./recognized_screenshots/screenshot_4.jpg" width="325"/>
+<img src="./recognized_screenshots/screenshot_1.jpg" width="325" hspace="20"/> <img src="./recognized_screenshots/screenshot_2.jpg" width="325"/> 
+<img src="./recognized_screenshots/screenshot_3.jpg" width="325" hspace="20"/> <img src="./recognized_screenshots/screenshot_4.jpg" width="325"/>
 <img src="./recognized_screenshots/screenshot_5.jpg" width="325"/>
+
+
 ##### Click [here](./MNIST_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
