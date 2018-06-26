@@ -17,10 +17,10 @@ The Keras framework comes already with a MNIST Dataset that can be downloaded. I
 
 A glimpse into the dataset is provided below:
 
-<img src="http://yann.lecun.com/exdb/mnist/" alt="neofetch" >
+<img src="https://dmtyylqvwgyxw.cloudfront.net/instances/132/uploads/images/photo/image/33904/large_29158d37-4da1-490b-80d2-c98e8c9287b4.jpg" alt="neofetch" >
 
 More information about the data set used in the study can be found at: 
-
+http://yann.lecun.com/exdb/mnist/
 ## Tools required
 
 - [Python](https://www.python.org/). Python 3 is the best option.
