@@ -153,12 +153,9 @@ print('Test accuracy:', score[1])
 
 <img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
 
-#### Plot of model training and model test
+#### Plot of model accuracy and loss
 
-<img src="images/roc_curve_imbalanced.PNG" width="425"/> <img src="images/roc_curve_balanced.PNG" width="425"/> 
-<p align="left">
-<img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
-</p>
+<img src="model_accuracy_loss.PNG" width="425"/> 
 
 #### Using OpenCV to capture webcam
 
