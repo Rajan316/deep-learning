@@ -144,14 +144,11 @@ print('Test accuracy:', score[1])
 ```
 
 
-<img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
+<img src="train_screenshot.PNG" /> 
 
 #### Plot of model training and model test
 
-<img src="images/roc_curve_imbalanced.PNG" width="425"/> <img src="images/roc_curve_balanced.PNG" width="425"/> 
-<p align="left">
-<img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
-</p>
+<img src="model_accuracy_loss.PNG"/> 
 
 #### Images of prediction
 
