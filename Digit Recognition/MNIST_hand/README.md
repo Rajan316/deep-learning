@@ -144,14 +144,11 @@ print('Test accuracy:', score[1])
 ```
 
 
-<img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
+<img src="train_screenshot.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
 
 #### Plot of model training and model test
 
-<img src="images/roc_curve_imbalanced.PNG" width="425"/> <img src="images/roc_curve_balanced.PNG" width="425"/> 
-<p align="left">
-<img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
-</p>
+
 
 #### Using OpenCV to capture webcam
 
@@ -184,7 +181,7 @@ while (cap.isOpened()):
 <img src="./recognized_screenshots/screenshot_5.jpg" width="325" hspace="20"/>
 
 
-##### Click [here](./MNIST_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
+##### Click [here](./MNIST_hand.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
 
