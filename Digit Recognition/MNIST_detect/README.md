@@ -124,7 +124,7 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 ```
-<img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/>
+<img src="images/model_plot.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/>
 
 #### Compiling and training the model
 
