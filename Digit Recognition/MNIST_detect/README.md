@@ -2,7 +2,7 @@
 <p align="center">
 <img src="https://cdn-images-1.medium.com/max/718/1*4TJWlK-FPhskEIJshfEx5g.jpeg" alt="neofetch" align="middle" height="200px">
 </p>
-Numbers are everywhere! Humans can read and recognize digits within few    <br />
+Numbers are everywhere! Humans can read and recognize digits within few milliseconds. Let us teach computers to do the same through convolutional neural networks.   <br />
 
 
 ## Objective
@@ -30,6 +30,12 @@ More information about the data set used in the study can be found at:
 	- pandas
 	- scikit-learn
 	- matplotlib
+- Deep learning packages
+	- keras
+	- tensorflow
+	- theano
+- Computer vision packages
+	- OpenCV
   
 ## Installation of Python and packages
 
@@ -37,7 +43,7 @@ Install Python 3 and all of these packages in a few clicks with the [Anaconda Py
 
 Anaconda is very popular amongst Data Science and Machine Learning communities.
 
-The scientific computing packeges used in this project are:
+The scientific computing packages used in this project are:
 
 1. numpy
 2. pandas
