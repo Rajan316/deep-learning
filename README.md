@@ -16,5 +16,5 @@ CNNs eliminate the need for manual feature extraction, so you do not need to ide
 
 ### [Digit recognition](./Digit Recognition)
 
-<img src="" alt="neofetch" align="left" height="150px">
+<img src="recognize_main.PNG" alt="neofetch" align="left" height="150px">
 In this project, we will have a glimpse into how MNIST data can be used to recognize images of digits using convolutional neural networks done through static images, live feed webcam as well as hand movements. <br />
