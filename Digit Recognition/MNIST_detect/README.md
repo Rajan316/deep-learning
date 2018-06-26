@@ -155,9 +155,9 @@ print('Test accuracy:', score[1])
 
 #### Images of prediction
 
-img src="predictio" width="425"/> <img src="images/roc_curve_balanced.PNG" width="425"/> 
+img src="prediction1.PNG" width="425"/> <img src="images/prediction2.PNG" width="425"/> 
 <p align="left">
-<img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
+<img src="images/predicton3.PNG" width="350" hspace="50"/>
 </p>
 ##### Click [here](./MNIST_detect.ipynb) to go to the notebook where the entire case study steps has been performed.
 
