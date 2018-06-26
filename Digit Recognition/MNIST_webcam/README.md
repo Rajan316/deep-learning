@@ -153,11 +153,33 @@ print('Test accuracy:', score[1])
 <img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
 </p>
 
+#### Using OpenCV to capture webcam
+
+```{}
+cap = cv2.VideoCapture(0)
+
+while (cap.isOpened()):
+    ret, img = cap.read()
+    img, contours, thresh = get_img_contour_thresh(img)
+    ans2 = ''
+
+    if len(contours) > 0:
+        contour = max(contours, key=cv2.contourArea)
+        if cv2.contourArea(contour) > 2500:
+             
+            x, y, w, h = cv2.boundingRect(contour)  
+            newImage = thresh[y:y + h, x:x + w]
+            image_read= (np.array(newImage,'float'))
+            im_read=cv2.resize(image_read,(28,28))
+            img1 = im_read.reshape([1, 28, 28, 1])
+            ans2 = model.predict(img1)
+```
+
 #### Images of prediction
 
-<img src="./recognized_screenshots/screenshot_1.jpg" width="425"/> <img src="./recognized_screenshots/screenshot_2.jpg" width="425"/> 
-<img src="./recognized_screenshots/screenshot_3.jpg" width="425"/> <img src="./recognized_screenshots/screenshot_4.jpg" width="425"/>
-<img src="./recognized_screenshots/screenshot_5.jpg" width="425"/>
+<img src="./recognized_screenshots/screenshot_1.jpg" width="325"/> <img src="./recognized_screenshots/screenshot_2.jpg" width="325"/> 
+<img src="./recognized_screenshots/screenshot_3.jpg" width="325"/> <img src="./recognized_screenshots/screenshot_4.jpg" width="325"/>
+<img src="./recognized_screenshots/screenshot_5.jpg" width="325"/>
 ##### Click [here](./MNIST_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
