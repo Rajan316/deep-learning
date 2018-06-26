@@ -61,7 +61,7 @@ Commands for installation of packages in Anaconda are:
 
 ### Data Loading
 
-The MNISt dataset is available by default in the keras package
+The MNIST dataset is available by default in the keras package.
 
 Read the dataset MNIST
 ```{r load_data}
@@ -72,20 +72,35 @@ from keras.datasets import mnist
 <img src="input_data_sample.PNG" alt="neofetch" align="middle" >
 
 
-### Data Cleaning
+### Preparing the dataset
 
 #### Steps:
 
-* Count the number of null values present in each column.
-<img src="images/null_values.PNG" alt="neofetch" align="middle" >
-
-* All columns are having less than 10% of missing values and thus they can be filled in with appropriate values using the following user defined function:
+* Reshape data
 
 ```{python impute function}
-def impute_median(series):
-    return series.fillna(series.median())
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+x_train /= 255
+x_test /= 255
 ```
-* Few of the columns like BMI and cigsPerDay can be filled in using groupby by comparing values in columns directly related to them.
+
+* Normalize data
+
+```{python impute function}
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+x_train /= 255
+x_test /= 255
+```
+* Convert number of classes to categorical
+
+```{python impute function}
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+x_train /= 255
+x_test /= 255
+```
 
 This can be illustrated using a correlation plot. From this plot we can understand how some of the columns are correlated to each other thus using them in filling the missing values.
 
