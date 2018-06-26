@@ -124,7 +124,7 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 ```
-<img src="images/model_plot.png" width="425"/> 
+<img src="model_plot.png" width="425"/> 
 
 #### Compiling and training the model
 
@@ -152,8 +152,13 @@ print('Test accuracy:', score[1])
 <p align="left">
 <img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
 </p>
- 
 
+#### Images of prediction
+
+img src="predictio" width="425"/> <img src="images/roc_curve_balanced.PNG" width="425"/> 
+<p align="left">
+<img src="images/roc_curve_area_imbalanced.PNG" width="350" hspace="50"/> <img src="images/roc_curve_area_balanced.PNG" width="350"/> 
+</p>
 ##### Click [here](./MNIST_detect.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
