@@ -155,6 +155,8 @@ print('Test accuracy:', score[1])
 
 #### Plot of model accuracy and loss
 
+We can see that the model has comparable performance on both train and test datasets. If these parallel plots start to depart consistently, it might be a sign to stop training at an earlier epoch.
+
 <img src="model_accuracy_loss.PNG" /> 
 
 #### Using OpenCV to capture webcam
