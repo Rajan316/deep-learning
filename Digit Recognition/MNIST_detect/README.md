@@ -124,6 +124,7 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 ```
+<img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/>
 
 #### Compiling and training the model
 
@@ -153,10 +154,10 @@ print('Test accuracy:', score[1])
 </p>
  
 
-##### Click [here](./.ipynb) to go to the notebook where the entire case study steps has been performed.
+##### Click [here](./MNIST_detect.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
-## Future Scope
+
 
 
 
