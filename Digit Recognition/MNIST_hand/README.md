@@ -1,4 +1,4 @@
-# Digit Recognition through live feed webcam
+# Digit Recognition through hand movements
 <p align="center">
 <img src="https://cdn-images-1.medium.com/max/718/1*4TJWlK-FPhskEIJshfEx5g.jpeg" alt="neofetch" align="middle" height="200px">
 </p>
@@ -7,7 +7,7 @@ Numbers are everywhere! Humans can read and recognize digits within few millisec
 
 ## Objective
 
-This project aims to build a convolutional neural network that classifies digits from 0-9 through a live webcam. 
+This project aims to build a convolutional neural network that classifies digits from 0-9 through hand movements. 
 
 ## Dataset description
 
