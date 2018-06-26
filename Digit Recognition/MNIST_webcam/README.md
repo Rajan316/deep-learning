@@ -155,7 +155,7 @@ print('Test accuracy:', score[1])
 
 #### Plot of model accuracy and loss
 
-<img src="model_accuracy_loss.PNG" width="425"/> 
+<img src="model_accuracy_loss.PNG" /> 
 
 #### Using OpenCV to capture webcam
 
