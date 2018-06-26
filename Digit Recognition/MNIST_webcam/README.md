@@ -130,7 +130,7 @@ model.add(Dense(num_classes, activation='softmax'))
 
 The model summary gives a representation of the trained model and its statistics.
 
-<img src="model_summary.PNG" width="425"/> 
+<img src="model_summary.PNG" /> 
 
 
 #### Compiling and training the model
@@ -151,10 +151,33 @@ print('Test accuracy:', score[1])
 ```
 
 
-<img src="images/conf_imbalanced.PNG" width="425"/> <img src="images/conf_balanced.PNG" width="450"/> 
+<img src="images/train_screenshot.PNG"/> 
 
 #### Plot of model accuracy and loss
 
+```{}
+from matplotlib import pyplot as plt
+fig = plt.figure(figsize=(10,6))
+plt.subplot(2,1,1)
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='lower right')
+
+plt.subplot(2,1,2)
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper right')
+
+plt.tight_layout()
+fig
+plt.show()
+```
 We can see that the model has comparable performance on both train and test datasets. If these parallel plots start to depart consistently, it might be a sign to stop training at an earlier epoch.
 
 <img src="model_accuracy_loss.PNG" /> 
