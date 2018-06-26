@@ -78,12 +78,22 @@ from keras.datasets import mnist
 
 * Reshape data
 
+The image_data_format parameter affects how each of the backends treat the data dimensions when working with multi-dimensional convolution layers (such as Conv2D, Conv3D, Conv2DTranspose, Copping2D, … and any other 2D or 3D layer). Specifically, it defines where the 'channels' dimension is in the input data.
+
+Both TensorFlow and Theano expects a four dimensional tensor as input. But where TensorFlow expects the 'channels' dimension as the last dimension (index 3, where the first is index 0) of the tensor – i.e. tensor with shape (samples, rows, cols, channels) – Theano will expect 'channels' at the second dimension (index 1) – i.e. tensor with shape (samples, channels, rows, cols). The outputs of the convolutional layers will also follow this pattern.
+
 ```{python impute function}
-x_train = x_train.astype('float32')
-x_test = x_test.astype('float32')
-x_train /= 255
-x_test /= 255
+if K.image_data_format() == 'channels_first':
+    x_train = x_train.reshape(x_train.shape[0], 1, img_rows, img_cols)
+    x_test = x_test.reshape(x_test.shape[0], 1, img_rows, img_cols)
+    input_shape = (1, img_rows, img_cols)
+else:
+    x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
+    x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
+    input_shape = (img_rows, img_cols, 1)
 ```
+
+Mixing up the channels order would result in your models being trained in unexpected ways.
 
 * Normalize data
 
@@ -96,10 +106,8 @@ x_test /= 255
 * Convert number of classes to categorical
 
 ```{python impute function}
-x_train = x_train.astype('float32')
-x_test = x_test.astype('float32')
-x_train /= 255
-x_test /= 255
+y_train = keras.utils.to_categorical(y_train, num_classes)
+y_test = keras.utils.to_categorical(y_test, num_classes)
 ```
 
 This can be illustrated using a correlation plot. From this plot we can understand how some of the columns are correlated to each other thus using them in filling the missing values.
