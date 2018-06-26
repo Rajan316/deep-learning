@@ -23,7 +23,7 @@ CNNs eliminate the need for manual feature extraction, so you do not need to ide
 
 ## This repository contains the following projects:
 
-### [Digit recognition] (https://github.com/Rajan316/deep-learning/tree/master/Digit%20Recognition)
+### [Digit recognition]("https://github.com/Rajan316/deep-learning/tree/master/Digit%20Recognition")
 
 <img src="recognize_main.PNG" alt="neofetch" align="left" width="200px">
 In this project, we will have a glimpse into how MNIST data can be used to recognize digits from 0-9 using convolutional neural networks using the MNIST dataset. We predict the digits using the trained algorithm through static images, live feed webcam as well as hand movements. <br />
