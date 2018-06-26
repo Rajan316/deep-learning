@@ -177,11 +177,11 @@ while (cap.isOpened()):
             ans2 = model.predict(img1)
 ```
 
-#### Images of prediction
+#### Screenshots of prediction
 
 <img src="./recognized_screenshots/screenshot_1.jpg" width="325" hspace="20"/> <img src="./recognized_screenshots/screenshot_2.jpg" width="325"/> 
 <img src="./recognized_screenshots/screenshot_3.jpg" width="325" hspace="20"/> <img src="./recognized_screenshots/screenshot_4.jpg" width="325"/>
-<img src="./recognized_screenshots/screenshot_5.jpg" width="325"/>
+<img src="./recognized_screenshots/screenshot_5.jpg" width="325" hspace="20"/>
 
 
 ##### Click [here](./MNIST_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
