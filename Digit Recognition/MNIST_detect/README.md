@@ -43,23 +43,31 @@ Install Python 3 and all of these packages in a few clicks with the [Anaconda Py
 
 Anaconda is very popular amongst Data Science and Machine Learning communities.
 
-The scientific computing packages used in this project are:
+The packages used in this project are:
 
 1. numpy
-2. pandas
-3. scikit-learn
-4. seaborn
+2. keras
+3. opencv
+4. tensorflow
 5. matplotlib
+
+Commands for installation of packages in Anaconda are:
+
+1. conda install -c conda-forge keras 
+2. conda install -c conda-forge tensorflow
+3. conda install -c conda-forge opencv
 
 ## The Analytical Approach
 
 ### Data Loading
 
-Read the dataset framingham
+The MNISt dataset is available by default in the keras package
+
+Read the dataset MNIST
 ```{r load_data}
-framingham = pd.read_csv('framingham.csv')
-# print the first 5 rows of data
-framingham.head()
+from keras.datasets import mnist
+# the data, split between train and test sets
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 ```
 <img src="images/profile.PNG" alt="neofetch" align="middle" >
 
