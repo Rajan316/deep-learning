@@ -151,7 +151,7 @@ print('Test accuracy:', score[1])
 ```
 
 
-<img src="images/train_screenshot.PNG"/> 
+<img src="train_screenshot.PNG"/> 
 
 #### Plot of model accuracy and loss
 
