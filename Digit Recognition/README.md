@@ -9,7 +9,7 @@ MNIST ("Modified National Institute of Standards and Technology") is the de fact
 ### 1. [Digit recognition through static Images](./MNIST_detect)
 
 <img src="https://www.wolfram.com/language/11/neural-networks/assets.en/digit-classification/smallthumb_1.png" alt="neofetch" align="left" height="150px">
-The MNISt dataset is used to recognize digits. <br />
+The MNIST dataset is used to recognize digits. <br />
  <br /> In this project, we will have a glimpse into how MNIST data can be used to recognize images of digits using convolutional neural networks.
 
 ##### Click [here](./MNIST_detect) to go to Digit recognition through static Images case study.
@@ -17,9 +17,9 @@ The MNISt dataset is used to recognize digits. <br />
 ### 2. [Digit recognition through webcam](./MNIST_webcam)
 
 <img src="https://www.mkompf.com/cplus/images/top.png" alt="neofetch" align="left" height="150px">
-The MNISt dataset is used to recognize digits. <br />
+The MNIST dataset is used to recognize digits. <br />
 
-<br />The saved model is used for recognizing digits in real time using OpenCV and python through a webcam accessing through image processing. <br />
+<br />The saved model is used for recognizing digits in real time using OpenCV and python through a webcam. <br />
 
 ##### Click [here](./MNIST_webcam) to go to Digit recognition through webcam case study.
 
