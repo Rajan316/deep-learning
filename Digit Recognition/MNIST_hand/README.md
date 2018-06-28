@@ -208,10 +208,8 @@ while (cap.isOpened()):
 
 #### Screenshots of prediction
 
-<img src="./recognized_screenshots/screenshot_1.jpg" width="325" hspace="20"/> <img src="./recognized_screenshots/screenshot_2.jpg" width="325"/> 
-<img src="./recognized_screenshots/screenshot_3.jpg" width="325" hspace="20"/> <img src="./recognized_screenshots/screenshot_4.jpg" width="325"/>
-<img src="./recognized_screenshots/screenshot_5.jpg" width="325" hspace="20"/>
-
+<img src="prediction_hand2.png" width="325" hspace="20"/> <img src="prediction_hand3.png" width="325"/> 
+<img src="prediction_hand4.png" width="325" hspace="20"/> 
 
 ##### Click [here](./MNIST_hand.ipynb) to go to the notebook where the entire case study steps has been performed.
 
