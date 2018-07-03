@@ -30,7 +30,7 @@ The custom made face dataset is used to recognize faces. <br />
 
 ### 3. [Face recognition through video feed](./face_recog_video)
 
-<img src="https://i.ytimg.com/vi/K4u4Dpl6NKk/maxresdefault.jpg" alt="neofetch" align="left" height="200px">
+<img src="https://i.ytimg.com/vi/K4u4Dpl6NKk/maxresdefault.jpg" alt="neofetch" align="left" height="240px">
 
 In this project, using a video feed we recognize faces by training a custom made dataset<br />
 
