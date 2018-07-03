@@ -294,11 +294,11 @@ cv2.destroyWindow('img')
 ```
 #### Images of prediction
 
-<img src="img_screenshot_03.07.2018_1.png" width="525"/> 
-<img src="img_screenshot_03.07.2018_2.png" width="525"/> 
+<img src="Video_screenshot_03.07.2018_1.png" width="525"/> 
 
 
-##### Click [here](./Face_recog_.ipynb) to go to the notebook where the entire case study steps has been performed.
+
+##### Click [here](./Face_recog_video.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
 
