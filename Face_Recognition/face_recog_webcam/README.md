@@ -246,7 +246,7 @@ plt.title(f'Recognized as {example_identity}');
 
 To embed the dataset into 2D space for displaying identity clusters, t-distributed Stochastic Neighbor Embedding (t-SNE) is applied to the 128-dimensional embedding vectors. Except from a few outliers, identity clusters are well separated.
 
-<img src="./face_recog_images/cluster_embeddings.PNG" />
+<img src="./Face_Recognition/face_recog_images/cluster_embeddings.PNG" />
 
 #### To detect faces through webcam
 
@@ -317,7 +317,7 @@ cv2.destroyAllWindows()
 ```
 #### Images of prediction
 
-<img src="Video_screenshot_03.07.2018_1.PNG" width="525"/> 
+<img src="Video_screenshot_03.07.2018_1.png" width="525"/> 
 
 
 ##### Click [here](./Face_recog_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
