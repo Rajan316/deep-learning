@@ -290,9 +290,9 @@ cv2.destroyWindow('img')
 ```
 #### Images of prediction
 
-<img src="img_screenshot_03.07.2018_1.jpg" width="425"/> 
-<img src="img_screenshot_03.07.2018_2.jpg" width="425"/> 
-<img src="img_screenshot_03.07.2018_3" width="425"/>
+<img src="img_screenshot_03.07.2018_1.png" width="425"/> 
+<img src="img_screenshot_03.07.2018_2.png" width="425"/> 
+<img src="img_screenshot_03.07.2018_png" width="425"/>
 
 ##### Click [here](./Face_recog_images.ipynb) to go to the notebook where the entire case study steps has been performed.
 
