@@ -1,6 +1,7 @@
 # Face Recognition
 <p align="center">
 <img src="https://slaterzurz.com/wp-content/uploads/2017/12/Facial-Recognition-Technology-Law-Enforcement-Tool-or-Threat-to-Constitutional-Rights.jpg" alt="neofetch" align="middle" height="200px">
+ 
 Face recognition is a biometric software application capable of uniquely identifying or verifying a person by comparing and analyzing patterns based on the person's facial contours. Facial recognition is mostly used for security purposes, though there is increasing interest in other areas of use.</p>
  <br />
 
