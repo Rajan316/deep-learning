@@ -10,7 +10,7 @@ Let's replicate the same through convolutional neural networks that mimic operat
 
 ## Objective
 
-This project aims to build a convolutional neural network that classifies faces of individuals from static images. 
+This project aims to build a convolutional neural network that classifies faces of individuals from webcam. 
 
 ## Dataset description
 
@@ -246,60 +246,81 @@ plt.title(f'Recognized as {example_identity}');
 
 To embed the dataset into 2D space for displaying identity clusters, t-distributed Stochastic Neighbor Embedding (t-SNE) is applied to the 128-dimensional embedding vectors. Except from a few outliers, identity clusters are well separated.
 
-<img src="cluster_embeddings.PNG" />
+<img src="./face_recog_images/cluster_embeddings.PNG" />
 
-#### To detect multiple faces
+#### To detect faces through webcam
 
-We have to change the block of code to recognize all faces in a frame using Dlib frontal face detector. We use the option getAllFaceBoundingBoxes from the AlignDlib module.
+We have to use the opencv videocapture function to capture webcam video feed. The model has been used to predict on single faces as well as multiple faces.
 
 ```{}
-embedded = np.zeros((metadata.shape[0], 128))
-rgbImg = cv2.imread(r"image4.jpg")
-bImg = rgbImg[...,::-1]
-bbs = alignment.getAllFaceBoundingBoxes(bImg)
-# Show original image
+# Get a reference to webcam #0 (the default one)
+video_capture = cv2.VideoCapture(0)
 
-#plt.imshow(rgbImg)
-if not bbs:
-    print("Unable to find a face: {}".format(imgPath))
 
-for bb in bbs:
-    print(bb)
+
+# Initialize some variables
+bb=[]
+process_this_frame = True
+
+while True:
+    # Grab a single frame of video
+    ret, frame = video_capture.read()
+
+    # Resize frame of video to 1/4 size for faster face recognition processing
+    small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+    small_frame = small_frame[...,::-1]
+    # Only process every other frame of video to save time
+    if process_this_frame:
+        # Find all the faces and face encodings in the current frame of video
+        #face_locations = face_recognition.face_locations(small_frame)
+        #face_encodings = face_recognition.face_encodings(small_frame, face_locations)
+        # Detect face and return bounding box
+        bb = alignment.getLargestFaceBoundingBox(small_frame)
+        
+        # Transform image using specified face landmark indices and crop image to 96x96
+        #jc_aligned = alignment.align(96, small_frame, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+        if bb!=None:
+            print(bb.left(), bb.top(), bb.width(), bb.height())
+            # Draw a box around the face
+            
+            big_frame = cv2.resize(frame, (0, 0), fx=1.0, fy=1.0)
+            big_frame = big_frame[...,::-1]
+            bb1 = alignment.getLargestFaceBoundingBox(big_frame)
+            jc_aligned = alignment.align(96, big_frame, bb1, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+            # scale RGB values to interval [0,1]
+            img = (jc_aligned / 255.).astype(np.float32)
+            # obtain embedding vector for image
+            embedded = nn4_small2_pretrained.predict(np.expand_dims(img, axis=0))[0]
+            example_prediction = svc.predict([embedded])
+            example_identity = encoder.inverse_transform(example_prediction)[0]
+            print(example_identity)
+            #
+            cv2.rectangle(frame, (bb.left()*4, bb.top()*4), ((bb.left()+bb.width())*4, (bb.top()+bb.height())*4), (0, 0, 255), 2)
+            #cv2.rectangle(frame, (bb1.left(), (bb1.top()+bb1.height()) - 35), ((bb1.left()+bb1.width()), ((bb1.top()+bb1.height())*4), (0, 0, 255), cv2.FILLED))
+            font = cv2.FONT_HERSHEY_DUPLEX
+            cv2.putText(frame, example_identity, ((bb1.left()) + 6, ((bb1.top()+bb1.height())) - 6), font, 0.6, (255, 255, 255), 1)
+        
+    process_this_frame = not process_this_frame
+
    
     
-    #alignedFace = alignment.align( 96, rgbImg, alignment.getLargestFaceBoundingBox(bb), 
-                           #landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
-    jc_aligned = alignment.align(96, bImg, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
-            # scale RGB values to interval [0,1]
-    img = (jc_aligned / 255.).astype(np.float32)
-    print(img.shape)
-    # obtain embedding vector for image
-    embedded = nn4_small2_pretrained.predict(np.expand_dims(img, axis=0))[0]
-    example_prediction = svc.predict([embedded])
-    example_identity = encoder.inverse_transform(example_prediction)[0]
-    print(example_identity)
-    cv2.rectangle(rgbImg, (bb.left(), bb.top()), ((bb.left()+bb.width()), (bb.top()+bb.height())), (0, 0, 255), 2)
-    font = cv2.FONT_HERSHEY_DUPLEX
-    cv2.putText(rgbImg, example_identity, ((bb.left()) + 6, ((bb.top()+bb.height())) - 6), font, 0.6, (255, 255, 255), 1)
-    
-cv2.imshow('img',rgbImg)
-# Hit 'q' on the keyboard to quit!
-while(True):
-    k = cv2.waitKey(33)
-    if k == -1:  # if no key was pressed, -1 is returned
-        continue
-    else:
+    # Display the resulting image
+    cv2.imshow('Video', frame)
+
+    # Hit 'q' on the keyboard to quit!
+    if cv2.waitKey(25) & 0xFF == ord('q'):
         break
-cv2.destroyWindow('img')
+
+# Release handle to the webcam
+video_capture.release()
+cv2.destroyAllWindows()
 ```
 #### Images of prediction
 
-<img src="img_screenshot_03.07.2018_1.png" width="525"/> 
-<img src="img_screenshot_03.07.2018_2.png" width="525"/> 
-<img src="img_screenshot_03.07.2018_3.png" width="525"/> 
-<img src="img_screenshot_03.07.2018_4.png" width="525"/>
+<img src="Video_screenshot_03.07.2018_1.PNG" width="525"/> 
 
-##### Click [here](./Face_recog_images.ipynb) to go to the notebook where the entire case study steps has been performed.
+
+##### Click [here](./Face_recog_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
 
 
 
