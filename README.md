@@ -5,7 +5,7 @@ This repository aims at performing deep learning on a variety of image classsifc
 
 ### 1. [Digit Recognition](./Digit%20Recognition)
 
-<img src="recognize_main.PNG" alt="neofetch" align="left" width="500px" >
+<img src="recognize_main.PNG" alt="neofetch" align="left" width="300px" >
 In this project, we will have a glimpse into how MNIST data can be used to recognize digits from 0-9 using convolutional neural networks using the MNIST dataset. We predict the digits using the trained algorithm through the following three methods: 
 
 1. Static images, 
