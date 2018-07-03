@@ -1,7 +1,10 @@
 # Face Recognition
 <p align="center">
-<img src="https://slaterzurz.com/wp-content/uploads/2017/12/Facial-Recognition-Technology-Law-Enforcement-Tool-or-Threat-to-Constitutional-Rights.jpg" alt="neofetch" align="middle" >
+<img src="https://slaterzurz.com/wp-content/uploads/2017/12/Facial-Recognition-Technology-Law-Enforcement-Tool-or-Threat-to-Constitutional-Rights.jpg" align="middle" >
  
+
+
+ <br />
 Face recognition is a biometric software application capable of uniquely identifying or verifying a person by comparing and analyzing patterns based on the person's facial contours. Facial recognition is mostly used for security purposes, though there is increasing interest in other areas of use.</p>
  <br />
 
@@ -18,6 +21,7 @@ The MNIST dataset is used to recognize digits. <br />
 ### 2. [Face recognition through webcam](./face_recog_webcam)
 
 <img src="http://static.oschina.net/uploads/img/201205/27231558_xXiS.png" alt="neofetch" align="left" height="150px">
+
 The MNIST dataset is used to recognize digits. <br />
 
 <br />The saved model is used for recognizing digits in real time using OpenCV and python through a webcam. <br />
