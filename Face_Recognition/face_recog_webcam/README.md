@@ -1,4 +1,4 @@
-# Face Recognition through static images
+# Face Recognition through webcam
 
 <p align="center">
 <img src="https://4.bp.blogspot.com/-0N9UXFGHrok/WbvQrlXAZNI/AAAAAAAAEQU/q-KnCQpf-Vkj_enWRo5Ayqn3ca5Kcq1DACLcBGAs/s1600/Face-Recognition-Access-Control-System.jpg" alt="neofetch" align="middle" height="200px">
@@ -246,7 +246,7 @@ plt.title(f'Recognized as {example_identity}');
 
 To embed the dataset into 2D space for displaying identity clusters, t-distributed Stochastic Neighbor Embedding (t-SNE) is applied to the 128-dimensional embedding vectors. Except from a few outliers, identity clusters are well separated.
 
-<img src="./Face_Recognition/face_recog_images/cluster_embeddings.PNG" />
+<img src="../face_recog_images/cluster_embeddings.PNG" />
 
 #### To detect faces through webcam
 
