@@ -318,7 +318,7 @@ cv2.destroyAllWindows()
 #### Images of prediction
 
 <img src="Video_screenshot_03.07.2018_1.png" width="525"/> 
-
+<img src="Video_screenshot_03.07.2018_4.png" width="525"/> 
 
 ##### Click [here](./Face_recog_webcam.ipynb) to go to the notebook where the entire case study steps has been performed.
 
