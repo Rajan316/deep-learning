@@ -1,5 +1,24 @@
 
 This repository aims at performing deep learning on a variety of image classsifcation tasks through programming in Python using packages Keras and OpenCV.
+## This repository contains the following projects:
+
+### 1. [Digit Recognition](./Digit%20Recognition)
+
+<img src="recognize_main.PNG" alt="neofetch" align="left" width="200px">
+In this project, we will have a glimpse into how MNIST data can be used to recognize digits from 0-9 using convolutional neural networks using the MNIST dataset. We predict the digits using the trained algorithm through the following three methods: 
+1. Static images, 
+2. Live feed webcam 
+3. Hand movements. 
+<br />
+
+### 2. [Face Recognition](./Face_Recognition)
+
+<img src="face_icon.PNG" alt="neofetch" align="left" width="200px">
+In this project, we will have a glimpse into how a database of people's faces can be used to recognize a person using convolutional neural networks. We recognize multiple faces using the trained algorithm through the following three methods:
+1. Static images, 
+2. Live feed webcam 
+3. Video feed. 
+<br />
 
 # Deep Learning
 
@@ -20,14 +39,4 @@ CNNs eliminate the need for manual feature extraction, so you do not need to ide
 <img src="https://codetolight.files.wordpress.com/2017/11/network.png" alt="neofetch">
 
 
-## This repository contains the following projects:
 
-### 1. [Digit Recognition](./Digit%20Recognition)
-
-<img src="recognize_main.PNG" alt="neofetch" align="left" width="200px">
-In this project, we will have a glimpse into how MNIST data can be used to recognize digits from 0-9 using convolutional neural networks using the MNIST dataset. We predict the digits using the trained algorithm through static images, live feed webcam as well as hand movements. <br />
-
-### 2. [Face Recognition](./Face_Recognition)
-
-<img src="face_icon.PNG" alt="neofetch" align="left" width="200px">
-In this project, we will have a glimpse into how a database of people's faces can be used to recognize a person using convolutional neural networks. We recognize multiple faces using the trained algorithm through static images, live feed webcam as well as video feed. <br />
