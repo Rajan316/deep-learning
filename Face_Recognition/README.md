@@ -13,16 +13,19 @@ Face recognition is a biometric software application capable of uniquely identif
 The custom made face dataset is used to recognize faces. <br />
  <br /> In this project, we will have a glimpse into how custom made dataset can be used to recognize images of faces using convolutional neural networks.
 
-##### Click [here](./MNIST_detect) to go to Face recognition through static Images case study.
+##### Click [here](./face_recog_images) to go to Face recognition through static Images case study.
 
 ### 2. [Face recognition through webcam](./face_recog_webcam)
 
-<img src="http://static.oschina.net/uploads/img/201205/27231558_xXiS.png" alt="neofetch" align="left" >
+<img src="http://static.oschina.net/uploads/img/201205/27231558_xXiS.png" alt="neofetch" align="left" width="150px">
 The custom made face dataset is used to recognize faces. <br />
 
 <br />The saved model is used for recognizing faces in real time using OpenCV and python through a webcam. <br />
 
-##### Click [here](./MNIST_webcam) to go to Face recognition through webcam case study.
+<br />
+<br />
+
+##### Click [here](./face_recog_webcam) to go to Face recognition through webcam case study.
 
 ### 3. [Face recognition through video feed](./face_recog_video)
 
@@ -30,7 +33,7 @@ The custom made face dataset is used to recognize faces. <br />
 
 In this project, using a video feed we recognize faces by training a custom made dataset<br />
 
-##### Click [here](./MNIST_hand) to go to Face recognition through video feed.
+##### Click [here](./face_recog_video) to go to Face recognition through video feed.
 
 
 
