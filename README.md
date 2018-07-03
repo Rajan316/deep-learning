@@ -5,15 +5,17 @@ This repository aims at performing deep learning on a variety of image classsifc
 
 ### 1. [Digit Recognition](./Digit%20Recognition)
 
-<img src="recognize_main.PNG" alt="neofetch" align="left" width="200px" >
+<img src="recognize_main.PNG" alt="neofetch" align="left" width="280px" >
 In this project, we will have a glimpse into how MNIST data can be used to recognize digits from 0-9 using convolutional neural networks using the MNIST dataset. We predict the digits using the trained algorithm through the following three methods: 
 
- 1. Static images, 
+ 1. Static images
+ <br />
 
  2. Live feed webcam 
-
+ <br />
+ 
  3. Hand movements. 
-<br />
+ <br />
 
 ### 2. [Face Recognition](./Face_Recognition)
 
@@ -21,11 +23,11 @@ In this project, we will have a glimpse into how MNIST data can be used to recog
 In this project, we will have a glimpse into how a database of people's faces can be used to recognize a person using convolutional neural networks. We recognize multiple faces using the trained algorithm through the following three methods:
 
  1. Static images, 
-
+ <br />
  2. Live feed webcam 
-
+ <br />
  3. Video feed. 
-<br />
+ <br />
 
 # Deep Learning
 
