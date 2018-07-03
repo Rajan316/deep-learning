@@ -128,7 +128,7 @@ def load_image(path):
     # in BGR order. So we need to reverse them
     return img[...,::-1]
 ```
-<img src="input_data_sample.jpg" alt="neofetch" align="middle" >
+<img src="../face_recog_images/input_data_sample.jpg" alt="neofetch" align="middle" >
 
 ### Building the network
 
@@ -143,7 +143,7 @@ from model import create_model
 nn4_small2_pretrained = create_model()
 nn4_small2_pretrained.load_weights('weights/nn4.small2.v1.h5')
 ```
-<img src="model.png" width="800"/>
+<img src="../face_recog_images/model.png" width="800"/>
 
 The OpenFace project provides pre-trained models that were trained with the public face recognition datasets FaceScrub and CASIA-WebFace. The Keras-OpenFace project converted the weights of the pre-trained nn4.small2.v1 model to CSV files which were then converted here to a binary format that can be loaded by Keras with load_weights:
 ```{}
@@ -194,7 +194,7 @@ plt.subplot(133)
 plt.imshow(jc_aligned);
 ```
 The detection of face from an image is illustrated below along with corresponding alignment.
-<img src="recog_image_detect.PNG" />
+<img src="../face_recog_images/recog_image_detect.PNG" />
 
 ### Embedding vectors
 Embedding vectors can now be calculated by feeding the aligned and scaled images into the pre-trained network.
@@ -211,7 +211,7 @@ for i, m in enumerate(metadata):
     embedded[i] = nn4_small2_pretrained.predict(np.expand_dims(img, axis=0))[0]
  
 ```
-<img src="distance_between.PNG" />
+<img src="../face_recog_images/distance_between.PNG" />
 
 With embedding we can find out the distance between two images and then decide how same or how different one is from the other.
 As expected, the distance between the two images of Arial Sharon is smaller than the distance between an image of Arial Sharon and an image of Messi (0.16 < 1.46). 
@@ -219,7 +219,7 @@ But we still do not know what distance threshold $\tau$ is the best boundary for
 
 For finding optimal distance threshold we employ F1 score to understand at which threshold the accuracy is the best. We find that at a threshold of 0.65 the accuracy is 95.9% but since nn4.small2.v1 is a relatively small model it is still less than what can be achieved by state-of-the-art models (> 99%).
 
-<img src="accracy_threshold.PNG" />
+<img src="../face_recog_images/accracy_threshold.PNG" />
 
 ### Face recognition 
 
@@ -240,7 +240,7 @@ plt.imshow(example_image)
 plt.title(f'Recognized as {example_identity}');
 ```
 
-<img src="recognized_as.PNG" />
+<img src="../face_recog_images/recognized_as.PNG" />
 
 #### Visualization of embeddings
 
