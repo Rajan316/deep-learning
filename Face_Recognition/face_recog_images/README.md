@@ -215,7 +215,7 @@ But we still do not know what distance threshold $\tau$ is the best boundary for
 
 For finding optimal distance threshold we employ F1 score to understand at which threshold the accuracy is the best. We find that at a threshold of 0.65 the accuracy is 95.9% but since nn4.small2.v1 is a relatively small model it is still less than what can be achieved by state-of-the-art models (> 99%).
 
-<img src="accuracy_threshold.PNG" />
+<img src="accracy_threshold.PNG" />
 
 ### Face recognition 
 
