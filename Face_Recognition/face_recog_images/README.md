@@ -250,7 +250,7 @@ To embed the dataset into 2D space for displaying identity clusters, t-distribut
 
 #### To detect multiple faces
 
-We have to change the block of code to recognize all faces in a frame using Dlib frontal face detector.
+We have to change the block of code to recognize all faces in a frame using Dlib frontal face detector. We use the option getAllFaceBoundingBoxes from the AlignDlib module.
 
 ```{}
 embedded = np.zeros((metadata.shape[0], 128))
