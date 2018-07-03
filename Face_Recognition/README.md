@@ -9,7 +9,7 @@ Face recognition is a biometric software application capable of uniquely identif
 
 ### 1. [Face recognition through static Images](./face_recog_images)
 
-<img src="https://technode.com/wp-content/uploads/2014/11/Face++.png" alt="neofetch" align="left" height="150px">
+<img src="https://technode.com/wp-content/uploads/2014/11/Face++.png" alt="neofetch" align="left" height="200px">
 The custom made face dataset is used to recognize faces. <br />
  <br /> In this project, we will have a glimpse into how custom made dataset can be used to recognize images of faces using convolutional neural networks.
 
@@ -27,7 +27,8 @@ The custom made face dataset is used to recognize faces. <br />
 
 ### 3. [Face recognition through video feed](./face_recog_video)
 
-<img src="https://i.ytimg.com/vi/K4u4Dpl6NKk/maxresdefault.jpg" alt="neofetch" align="left" height="150px">
+<img src="https://i.ytimg.com/vi/K4u4Dpl6NKk/maxresdefault.jpg" alt="neofetch" align="left" height="200px">
+
 In this project, using a video feed we recognize faces by training a custom made dataset<br />
 
 ##### Click [here](./MNIST_hand) to go to Face recognition through video feed.
