@@ -192,4 +192,109 @@ plt.imshow(jc_aligned);
 The detection of face from an image is illustrated below along with corresponding alignment.
 <img src="recog_image_detect.PNG" />
 
+### Embedding vectors
+Embedding vectors can now be calculated by feeding the aligned and scaled images into the pre-trained network.
+
+```{}
+embedded = np.zeros((metadata.shape[0], 128))
+
+for i, m in enumerate(metadata):
+    img = load_image(m.image_path())
+    img = align_image(img)
+    # scale RGB values to interval [0,1]
+    img = (img / 255.).astype(np.float32)
+    # obtain embedding vector for image
+    embedded[i] = nn4_small2_pretrained.predict(np.expand_dims(img, axis=0))[0]
+ 
+```
+<img src="distance_between.PNG" />
+
+With embedding we can find out the distance between two images and then decide how same or how different one is from the other.
+As expected, the distance between the two images of Arial Sharon is smaller than the distance between an image of Arial Sharon and an image of Messi (0.16 < 1.46). 
+But we still do not know what distance threshold $\tau$ is the best boundary for making a decision between same identity and different identity.
+
+For finding optimal distance threshold we employ F1 score to understand at which threshold the accuracy is the best. We find that at a threshold of 0.65 the accuracy is 95.9% but since nn4.small2.v1 is a relatively small model it is still less than what can be achieved by state-of-the-art models (> 99%).
+
+<img src="accuracy_threshold.PNG" />
+
+### Face recognition 
+
+Using Support vector machines(SVM) classifier we can train the embeddings and then test it on unknown embedded data and understand whether the face has been recognized correctly.
+
+```{}
+import warnings
+# Suppress LabelEncoder warning
+warnings.filterwarnings('ignore')
+
+example_idx = 38
+
+example_image = load_image(metadata[test_idx][example_idx].image_path())
+example_prediction = svc.predict([embedded[test_idx][example_idx]])
+example_identity = encoder.inverse_transform(example_prediction)[0]
+
+plt.imshow(example_image)
+plt.title(f'Recognized as {example_identity}');
+```
+
+<img src="recognized_as.PNG" />
+
+#### Visualization of embeddings
+
+To embed the dataset into 2D space for displaying identity clusters, t-distributed Stochastic Neighbor Embedding (t-SNE) is applied to the 128-dimensional embedding vectors. Except from a few outliers, identity clusters are well separated.
+
+<img src="cluster_embeddings.PNG" />
+
+#### To detect multiple faces
+
+We have to change the block of code to recognize all faces in a frame using Dlib frontal face detector.
+
+```{}
+embedded = np.zeros((metadata.shape[0], 128))
+rgbImg = cv2.imread(r"image4.jpg")
+bImg = rgbImg[...,::-1]
+bbs = alignment.getAllFaceBoundingBoxes(bImg)
+# Show original image
+
+#plt.imshow(rgbImg)
+if not bbs:
+    print("Unable to find a face: {}".format(imgPath))
+
+for bb in bbs:
+    print(bb)
+   
+    
+    #alignedFace = alignment.align( 96, rgbImg, alignment.getLargestFaceBoundingBox(bb), 
+                           #landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+    jc_aligned = alignment.align(96, bImg, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+            # scale RGB values to interval [0,1]
+    img = (jc_aligned / 255.).astype(np.float32)
+    print(img.shape)
+    # obtain embedding vector for image
+    embedded = nn4_small2_pretrained.predict(np.expand_dims(img, axis=0))[0]
+    example_prediction = svc.predict([embedded])
+    example_identity = encoder.inverse_transform(example_prediction)[0]
+    print(example_identity)
+    cv2.rectangle(rgbImg, (bb.left(), bb.top()), ((bb.left()+bb.width()), (bb.top()+bb.height())), (0, 0, 255), 2)
+    font = cv2.FONT_HERSHEY_DUPLEX
+    cv2.putText(rgbImg, example_identity, ((bb.left()) + 6, ((bb.top()+bb.height())) - 6), font, 0.6, (255, 255, 255), 1)
+    
+cv2.imshow('img',rgbImg)
+# Hit 'q' on the keyboard to quit!
+while(True):
+    k = cv2.waitKey(33)
+    if k == -1:  # if no key was pressed, -1 is returned
+        continue
+    else:
+        break
+cv2.destroyWindow('img')
+```
+#### Images of prediction
+
+<img src="img_screenshot_03.07.2018_1.jpg" width="425"/> 
+<img src="img_screenshot_03.07.2018_2.jpg" width="425"/> 
+<img src="img_screenshot_03.07.2018_3" width="425"/>
+
+##### Click [here](./Face_recog_images.ipynb) to go to the notebook where the entire case study steps has been performed.
+
+
 
