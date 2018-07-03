@@ -132,8 +132,12 @@ def load_image(path):
 
 ### Building the network
 
-This notebook uses a deep convolutional neural network (CNN) to extract features from input images. It follows the approach described in [1] with modifications inspired by the OpenFace project. Keras is used for implementing the CNN, Dlib and OpenCV for aligning faces on input images.
-The CNN architecture used here is a variant of the inception architecture. More precisely, it is a variant of the NN4 architecture described in [1] and identified as nn4.small2 model in the OpenFace project. This notebook uses a Keras implementation of that model whose definition was taken from the Keras-OpenFace project. There is a fully connected layer with 128 hidden units followed by an L2 normalization layer on top of the convolutional base. These two top layers are referred to as the embedding layer from which the 128-dimensional embedding vectors can be obtained. The complete model is defined in model.py and a graphical overview is given in model.png. A Keras version of the nn4.small2 model can be created with create_model().
+This notebook uses a deep convolutional neural network (CNN) to extract features from input images. It follows the approach described in  the OpenFace project. Keras is used for implementing the CNN, Dlib and OpenCV for aligning faces on input images.
+
+The CNN architecture used here is a variant of the inception architecture. More precisely, it is a variant of the NN4 architecture and identified as nn4.small2 model in the OpenFace project. This notebook uses a Keras implementation of that model whose definition was taken from the Keras-OpenFace project. 
+
+There is a fully connected layer with 128 hidden units followed by an L2 normalization layer on top of the convolutional base. These two top layers are referred to as the embedding layer from which the 128-dimensional embedding vectors can be obtained. The complete model is defined in model.py and a graphical overview is given below. A Keras version of the nn4.small2 model can be created with create_model().
+
 ```{}
 from model import create_model
 nn4_small2_pretrained = create_model()
