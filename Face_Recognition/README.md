@@ -9,7 +9,7 @@ Face recognition is a biometric software application capable of uniquely identif
 
 ### 1. [Face recognition through static Images](./face_recog_images)
 
-<img src="https://technode.com/wp-content/uploads/2014/11/Face++.png" alt="neofetch" align="left" height="200px">
+<img src="https://technode.com/wp-content/uploads/2014/11/Face++.png" alt="neofetch" align="left" height="170px">
 The custom made face dataset is used to recognize faces. <br />
  <br /> In this project, we will have a glimpse into how custom made dataset can be used to recognize images of faces using convolutional neural networks.
 
@@ -18,7 +18,7 @@ The custom made face dataset is used to recognize faces. <br />
 
 ### 2. [Face recognition through webcam](./face_recog_webcam)
 
-<img src="face_front.png" alt="neofetch" align="left" width="400px">
+<img src="face_front.png" alt="neofetch" align="left" width="380px">
 The custom made face dataset is used to recognize faces. <br />
 
 <br />The saved model is used for recognizing faces in real time using OpenCV and python through a webcam. <br />
