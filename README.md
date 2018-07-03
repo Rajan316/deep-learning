@@ -20,11 +20,11 @@ In this project, we will have a glimpse into how MNIST data can be used to recog
 <img src="face_icon.PNG" alt="neofetch" align="left" width="200px">
 In this project, we will have a glimpse into how a database of people's faces can be used to recognize a person using convolutional neural networks. We recognize multiple faces using the trained algorithm through the following three methods:
 
- 1. Static images, 
+1. Static images, 
 
- 2. Live feed webcam 
+2. Live feed webcam 
 
- 3. Video feed. 
+3. Video feed. 
  
  
  <br />
