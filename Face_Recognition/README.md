@@ -1,6 +1,6 @@
 # Face Recognition
 <p align="center">
-<img src="Facial-Recognition-Technology-Law-Enforcement-Tool-or-Threat-to-Constitutional-Rights.jpg" align="middle" width="800px >
+<img src="Facial-Recognition-Technology-Law-Enforcement-Tool-or-Threat-to-Constitutional-Rights.jpg" align="middle"  >
 </p>
 Face recognition is a biometric software application capable of uniquely identifying or verifying a person by comparing and analyzing patterns based on the person's facial contours. Facial recognition is mostly used for security purposes, though there is increasing interest in other areas of use.
  <br />
