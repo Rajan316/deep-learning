@@ -132,20 +132,64 @@ def load_image(path):
 
 ### Building the network
 
+This notebook uses a deep convolutional neural network (CNN) to extract features from input images. It follows the approach described in [1] with modifications inspired by the OpenFace project. Keras is used for implementing the CNN, Dlib and OpenCV for aligning faces on input images.
+The CNN architecture used here is a variant of the inception architecture [2]. More precisely, it is a variant of the NN4 architecture described in [1] and identified as nn4.small2 model in the OpenFace project. This notebook uses a Keras implementation of that model whose definition was taken from the Keras-OpenFace project. There is a fully connected layer with 128 hidden units followed by an L2 normalization layer on top of the convolutional base. These two top layers are referred to as the embedding layer from which the 128-dimensional embedding vectors can be obtained. The complete model is defined in model.py and a graphical overview is given in model.png. A Keras version of the nn4.small2 model can be created with create_model().
 ```{}
-model = Sequential()
-model.add(Conv2D(32, kernel_size=(3, 3),
-                 activation='relu',
-                 input_shape=input_shape))
-model.add(Conv2D(64, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.25))
-model.add(Flatten())
-model.add(Dense(128, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(num_classes, activation='softmax'))
+from model import create_model
+nn4_small2_pretrained = create_model()
+nn4_small2_pretrained.load_weights('weights/nn4.small2.v1.h5')
 ```
-<img src="model.png" width="800"/> 
+<img src="model.png" width="800"/>
 
+The OpenFace project provides pre-trained models that were trained with the public face recognition datasets FaceScrub and CASIA-WebFace. The Keras-OpenFace project converted the weights of the pre-trained nn4.small2.v1 model to CSV files which were then converted here to a binary format that can be loaded by Keras with load_weights:
+```{}
+nn4_small2_pretrained.load_weights('weights/nn4.small2.v1.h5')
+```
+### Face Alignment
+
+The nn4.small2.v1 model was trained with aligned face images, therefore, the face images from the custom dataset must be aligned too. Here, we use Dlib for face detection and OpenCV for image transformation and cropping to produce aligned 96x96 RGB face images. We use the AlignDlib utility to achieve the same.
+
+```{}
+import cv2
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+from align import AlignDlib
+
+%matplotlib inline
+
+def load_image(path):
+    img = cv2.imread(path, 1)
+    # OpenCV loads images with color channels
+    # in BGR order. So we need to reverse them
+    return img[...,::-1]
+
+# Initialize the OpenFace face alignment utility
+alignment = AlignDlib('models/shape_predictor_68_face_landmarks.dat')
+
+# Load an image of Jacques Chirac
+jc_orig = load_image(metadata[65].image_path())
+
+# Detect face and return bounding box
+bb = alignment.getLargestFaceBoundingBox(jc_orig)
+
+# Transform image using specified face landmark indices and crop image to 96x96
+jc_aligned = alignment.align(96, jc_orig, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+
+# Show original image
+plt.subplot(131)
+plt.imshow(jc_orig)
+
+# Show original image with bounding box
+plt.subplot(132)
+plt.imshow(jc_orig)
+plt.gca().add_patch(patches.Rectangle((bb.left(), bb.top()), bb.width(), bb.height(), fill=False, color='red'))
+
+# Show aligned image
+plt.subplot(133)
+plt.imshow(jc_aligned);
+```
+The detection of face from an image is illustrated below along with corresponding alignment.
+<img src="recog_image_detect.PNG" />
 
 
