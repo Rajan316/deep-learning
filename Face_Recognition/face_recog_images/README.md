@@ -77,13 +77,15 @@ The LFW dataset has to be downloaded. For this case study we have used images of
 7. Hugo Chavez
 8. Jacques Chirac
 9. Junichiro Koizumi
-10.Tony Blair
-11.Vladimir Putin
+10. Tony Blair
+11. Vladimir Putin
 
 Images from the internet were downloaded for the following person:
+
 12.Lionel Messi
 
 Images were collected from self:
+
 13.Roshni Rajan
 
 Load Metadata for images stored in file path
