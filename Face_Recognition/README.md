@@ -18,7 +18,7 @@ The custom made face dataset is used to recognize faces. <br />
 
 ### 2. [Face recognition through webcam](./face_recog_webcam)
 
-<img src="http://static.oschina.net/uploads/img/201205/27231558_xXiS.png" alt="neofetch" align="left" width="500px">
+<img src="face_front.png" alt="neofetch" align="left" width="200px">
 The custom made face dataset is used to recognize faces. <br />
 
 <br />The saved model is used for recognizing faces in real time using OpenCV and python through a webcam. <br />
