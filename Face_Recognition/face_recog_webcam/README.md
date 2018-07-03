@@ -317,6 +317,7 @@ cv2.destroyAllWindows()
 ```
 #### Images of prediction
 
+<img src="ezgif.com-video-to-gif.gif" width="525"/> 
 <img src="Video_screenshot_03.07.2018_1.png" width="525"/> 
 <img src="Video_screenshot_03.07.2018_4.png" width="525"/> 
 
