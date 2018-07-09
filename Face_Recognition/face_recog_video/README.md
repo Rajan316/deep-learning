@@ -314,6 +314,11 @@ while True:
 video_capture.release()
 cv2.destroyAllWindows()
 ```
+#### Video of prediction
+
+<img src="messi_vid_gif.gif"/> 
+
+
 #### Images of prediction
 
 <img src="Video_screenshot_03.07.2018_1.png" width="525"/> 
